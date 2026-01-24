@@ -2,6 +2,7 @@
 #define CAR_MANG_H
 
 #include <stdio.h>
+#include<string.h>
 
 typedef struct Car{
     int car_id;
