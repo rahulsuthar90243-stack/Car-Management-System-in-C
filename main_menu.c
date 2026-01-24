@@ -6,5 +6,4 @@ void main_menu() {
         printf("2. Customer Management\n");
         printf("3. Booking Management\n");
         printf("4. Exit\n");
-        printf("Enter your choice: ");
 }
