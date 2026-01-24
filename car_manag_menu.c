@@ -19,7 +19,7 @@ void car_manag_menu() {
     switch(option){
         case 1: add_new_car(&cars);
         break;
-        case 2: // View All Cars functionality
+        case 2: view_all_cars(&cars);
         break;
         case 3: // Search Car functionality
         break;
