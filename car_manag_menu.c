@@ -1,6 +1,7 @@
 #include "car_manag.h"
 
 void car_manag_menu() {
+    int option;
     printf("\n=== Car Management Menu ===\n");
     printf("[1]. Add New Car\n");
     printf("[2]. View All Cars\n");
@@ -8,4 +9,28 @@ void car_manag_menu() {
     printf("[4]. Update Car\n");
     printf("[5]. Delete Car\n");
     printf("[6]. Back to Main Menu\n");
+
+    printf("Enter your choice: ");
+    scanf("%d", &option);
+
+    // Here you can add functionality based on the user's choice
+    switch(option){
+        case 1: // Add New Car functionality
+        break;
+        case 2: // View All Cars functionality
+        break;
+        case 3: // Search Car functionality
+        break;
+        case 4: // Update Car functionality
+        break;
+        case 5: // Delete Car functionality
+        break;
+        case 6: // Back to Main Menu
+        break;
+
+        default:
+            if(option < 1 || option > 6){
+                printf("Invalid option . Please try again.\n");
+            }
+    }
 }
