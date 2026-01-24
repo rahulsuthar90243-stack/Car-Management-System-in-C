@@ -1,5 +1,7 @@
 #include "car_manag.h"
 
+Car cars;
+
 void car_manag_menu() {
     int option;
     printf("\n=== Car Management Menu ===\n");
@@ -15,7 +17,7 @@ void car_manag_menu() {
 
     // Here you can add functionality based on the user's choice
     switch(option){
-        case 1: // Add New Car functionality
+        case 1: add_new_car(&cars);
         break;
         case 2: // View All Cars functionality
         break;
