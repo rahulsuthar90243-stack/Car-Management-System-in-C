@@ -25,10 +25,17 @@ typedef struct Booking{
     float total_amount;
 }Booking;
 
+//menu function prototypes
 void main_menu();
 void car_manag_menu();
 void customer_manag_menu();
 void booking_manag_menu();
 
+//car management function prototypes
+void add_new_car(Car *cars);
+void view_all_cars(Car *cars);
+void search_car(Car *cars);
+void update_car(Car *cars);
+void delete_car(Car *cars);
 
 #endif
