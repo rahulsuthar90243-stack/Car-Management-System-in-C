@@ -24,7 +24,7 @@ void car_manag_menu() {
         break;
         case 3: search_car(&cars);
         break;
-        case 4: // Update Car functionality
+        case 4: update_car(&cars);
         break;
         case 5: // Delete Car functionality
         break;
