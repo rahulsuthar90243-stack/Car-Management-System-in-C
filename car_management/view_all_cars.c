@@ -19,13 +19,13 @@ void view_all_cars(Car * cars){
         scanf("%d", &id);
     }
     
-        printf("\n%-5s %-15s %-15s %-10s %-10s",
+        printf("\n%-5s %-15s %-19s %-14s %-10s",
                "ID", "Name", "Model", "Price/Day", "Available");
-        printf("\n------------------------------------------------------------");
+        printf("\n------------------------------------------------------------------");
 
         while (fread(cars, sizeof(Car), 1, file)){
             if (num == 1){
-            printf("\n%-5d %-15s %-15s %-10.2f %-10s\n",
+            printf("\n%-5d %-15s %-19s %-14.2f %-10s\n",
                    cars->car_id,
                    cars->car_name,
                    cars->car_model,
@@ -35,7 +35,7 @@ void view_all_cars(Car * cars){
             }
             else if (num == 2){
             if (cars->car_id == id){
-                printf("\n%-5d %-15s %-15s %-10.2f %-10s\n",
+                printf("\n%-5d %-15s %-19s %-10.2f %-10s\n",
                        cars->car_id,
                        cars->car_name,
                        cars->car_model,
