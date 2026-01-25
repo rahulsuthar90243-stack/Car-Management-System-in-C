@@ -36,7 +36,17 @@ void booking_manag_menu();
 void add_new_car(Car *cars);
 void view_all_cars(Car *cars);
 void search_car(Car *cars);
-void update_car(Car *cars);
+
 void delete_car(Car *cars);
+
+
+// update functon  prototype
+void update_car(Car *cars);
+void update_menu();
+void update_id(Car *car);
+void update_name(Car *car);
+void update_price(Car *car);
+void update_model(Car *car);
+void update_Availability(Car *car);
 
 #endif
