@@ -3,6 +3,7 @@
 Car cars;
 
 void car_manag_menu() {
+    while (1){
     int option;
     printf("\n=== Car Management Menu ===\n");
     printf("[1]. Add New Car\n");
@@ -21,18 +22,20 @@ void car_manag_menu() {
         break;
         case 2: view_all_cars(&cars);
         break;
-        case 3: // Search Car functionality
+        case 3: search_car(&cars);
         break;
         case 4: // Update Car functionality
         break;
         case 5: // Delete Car functionality
         break;
         case 6: // Back to Main Menu
-        break;
+        return;
 
         default:
             if(option < 1 || option > 6){
                 printf("Invalid option . Please try again.\n");
             }
+
+        }
     }
 }
