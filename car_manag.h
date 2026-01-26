@@ -48,5 +48,6 @@ void update_name(Car *car);
 void update_price(Car *car);
 void update_model(Car *car);
 void update_Availability(Car *car);
+void update_view(Car *car);
 
 #endif
