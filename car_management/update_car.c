@@ -11,6 +11,7 @@ if(file == NULL){
 int id;
 int found = 0;
 
+printf("\n==Update Car Management==");
 printf("\nPlease, enter car id: ");
 scanf("%d", &id);
 
@@ -40,7 +41,7 @@ while (1){
     scanf("%d", &press);
 
     switch (press){
-    case 1: //update_id();
+    case 1: update_id(car);
         break;
     case 2:  // update_name();
         break;
@@ -57,6 +58,7 @@ while (1){
             printf("\nInvalid option , Please try again.\n");
         }
     }
+    update_view(car);
 }
 
 
