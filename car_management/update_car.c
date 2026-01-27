@@ -43,7 +43,7 @@ while (1){
     switch (press){
     case 1: update_id(car);
         break;
-    case 2:  // update_name();
+    case 2:   update_name(car);
         break;
     case 3:  // update_price();
         break;
