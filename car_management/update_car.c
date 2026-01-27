@@ -45,13 +45,13 @@ while (1){
         break;
     case 2:   update_name(car);
         break;
-    case 3:  // update_price();
+    case 3:   update_price(car);
         break;
-    case 4:  // update_model();
+    case 4:   update_model(car);
         break;
-    case 5:   // update_availability
+    case 5:   update_Availability(car);
         break;
-    case 0:    // back to menu
+    case 0:
         return;    
     default:
         if(press > 5 || press < 1){
