@@ -26,7 +26,7 @@ void car_manag_menu() {
         break;
         case 4: update_car(&cars);
         break;
-        case 5: // Delete Car functionality
+        case 5: delete_car(&cars);
         break;
         case 6: // Back to Main Menu
         return;
