@@ -4,7 +4,7 @@ void update_view(Car *car){
     int num;
     while(num > 1 || num < 0)
     {
-        printf("\n\nPress 1 to view students | Press 0 to return: ");
+        printf("\n\nPress 1 to view car | Press 0 to return: ");
         scanf("%d", &num);
         if (num == 1){
             view_all_cars(car);
