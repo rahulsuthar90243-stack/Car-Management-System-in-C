@@ -21,6 +21,7 @@ void update_id(Car *car){
 
             fseek(file, -sizeof(Car), SEEK_CUR);
             fwrite(car, sizeof(Car), 1, file);
+            fflush(file);
             found = 1;
             break;
         }
