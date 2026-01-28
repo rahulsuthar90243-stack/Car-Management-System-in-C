@@ -8,7 +8,7 @@ void update_name(Car *car){
     }
 
     int id;
-    char new_name[15];
+    char new_name[50];
     int found = 0;
 
     printf("\nEnter Car Id: ");
