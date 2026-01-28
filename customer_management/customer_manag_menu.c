@@ -1,5 +1,7 @@
 #include "../car_manag.h"
 
+Customer customers;
+
 void customer_manag_menu(){
      while (1){
     int option;
@@ -9,23 +11,23 @@ void customer_manag_menu(){
     printf("[3]. Search Customers\n");
     printf("[4]. Back to Main Menu\n");
 
-    printf("Enter your choice: ");
+    printf("\nEnter your choice: ");
     scanf("%d", &option);
 
     // Here you can add functionality based on the user's choice
     switch(option){
-        case 1: // add_customer();
+        case 1:  add_customer(&customers);
         break;
-        case 2:  // view_customer();
+        case 2:  view_customer(&customers);
         break;
-        case 3:  // Search_customer();
+        case 3:  search_customer(&customers);
         break;
-        case 4:  // back
+        case 4:  // Back to Main Menu
         return;
 
         default:
             if(option < 1 || option > 4){
-                printf("Invalid option . Please try again.\n");
+                printf("\nInvalid option . Please try again.\n");
             }
 
         }
