@@ -50,4 +50,11 @@ void update_model(Car *car);
 void update_Availability(Car *car);
 void update_view(Car *car);
 
+
+// Customer Management Prototype
+void customer_manag_menu();
+void add_customer(Customer *customer);
+void view_customer(Customer *customer);
+void search_customer(Customer *customer);
+
 #endif
