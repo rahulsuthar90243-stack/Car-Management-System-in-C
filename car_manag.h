@@ -57,4 +57,11 @@ void add_customer(Customer *customer);
 void view_customer(Customer *customer);
 void search_customer(Customer *customer);
 
+
+//Booking car Management Prototype
+void booking_menu();
+void book_car(Car *car, Booking *book);
+void return_car();
+void view_bookings();
+
 #endif
