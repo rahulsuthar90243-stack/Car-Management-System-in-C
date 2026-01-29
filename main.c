@@ -18,8 +18,7 @@ int main(){
       break;
     case 2: customer_manag_menu();
       break;
-    case 3: booking_manag_menu();
-      break;
+    case 3: booking_menu();
     case 4: printf("Exiting the program. Goodbye!\n");
       return 0;
 
