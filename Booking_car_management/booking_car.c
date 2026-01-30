@@ -47,6 +47,9 @@ void book_car(Car *car, Booking *book)
             found = 1;
 
             book->car_id = car->car_id;
+            
+            printf("Enter booking Id: ");
+            scanf("%d", &book->booking_id);
 
             printf("Enter Customer ID: ");
             scanf("%d", &book->customer_id);
@@ -63,7 +66,6 @@ void book_car(Car *car, Booking *book)
     if (!found)
     {
         printf("\nCar not available or invalid Car ID!");
-        return;
     }
 
     FILE *newFile = fopen("booking.dat", "ab");
@@ -76,7 +78,10 @@ void book_car(Car *car, Booking *book)
     fwrite(book, sizeof(Booking), 1, newFile);
     fclose(newFile);
 
-    printf("\n\nCar booked successfully!");
+          
+    update_vil(book->car_id);
+
+    printf("\nCar booked successfully!");
     printf("\nTotal Rent Amount: %.2f\n", book->total_amount);
 }
 
