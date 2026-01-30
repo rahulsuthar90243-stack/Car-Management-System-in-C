@@ -4,8 +4,9 @@ Car car;
 Booking book;
 
 void booking_menu(){
+    while(1){
     int choice;
-    printf("\n===Booking Car Management==\n");
+    printf("\n\n===Booking Car Management==\n");
     printf("[1].Book Car\n");
     printf("[2].Return Car\n");
     printf("[3].View Booking\n");
@@ -20,17 +21,18 @@ void booking_menu(){
         break;
         case 2:  // Return_Car()
         break;
-        case 3:   // View_Car()
+        case 3:   view_bookings(&book);
         break;
         case 4:   //back
         return;
 
         default:
             if(choice < 1 || choice > 4){
-                printf("Invalid choice . Please try again.\n");
+                printf("\nInvalid choice . Please try again.\n");
             }
 
         }
+    }
     }
 
 
