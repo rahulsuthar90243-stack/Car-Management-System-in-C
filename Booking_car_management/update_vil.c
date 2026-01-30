@@ -3,7 +3,7 @@
 
 
 
-void update_vil(int bookedCarId)
+void update_vil(int bookedCarId, int f)
 {
     FILE *file = fopen("cars.dat", "rb");
     FILE *temp = fopen("temp.dat", "wb");
@@ -21,6 +21,12 @@ void update_vil(int bookedCarId)
         if (car.car_id == bookedCarId)
         {
             car.available = 0;   // mark unavailable
+        }
+
+        if(f == 1){
+         if(car.car_id == bookedCarId){
+            car.available = 1;
+         }
         }
 
 
