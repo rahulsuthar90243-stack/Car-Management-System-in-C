@@ -78,8 +78,8 @@ void book_car(Car *car, Booking *book)
     fwrite(book, sizeof(Booking), 1, newFile);
     fclose(newFile);
 
-          
-    update_vil(book->car_id);
+    int f = 5;     //  This is not usable for calling another function; it is temporary.
+    update_vil(book->car_id, f);
 
     printf("\nCar booked successfully!");
     printf("\nTotal Rent Amount: %.2f\n", book->total_amount);
