@@ -19,7 +19,7 @@ void booking_menu(){
     switch(choice){
         case 1:  book_car(&car, &book);
         break;
-        case 2:  // Return_Car()
+        case 2:  return_car();
         break;
         case 3:   view_bookings(&book);
         break;
