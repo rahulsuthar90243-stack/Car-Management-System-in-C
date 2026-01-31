@@ -63,5 +63,5 @@ void booking_menu();
 void book_car(Car *car, Booking *book);
 void return_car();
 void view_bookings(Booking *book);
-void update_vil(int id);
+void update_vil(int id, int status);
 #endif
