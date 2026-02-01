@@ -25,11 +25,14 @@ All data is stored permanently using **binary files**, making the project closer
 * View all cars
 * Update car availability
 * Delete car records
+* search car
 
 ### 👤 Customer Management
 
 * Add customer details
 * View customer list
+* customer-menu
+* search customer
 
 ### 📅 Booking Management
 
@@ -59,6 +62,8 @@ Car-Management-System-in-C/
 │
 ├── main.c
 ├── car_manag.h
+├── main_menu.c
+├── color.c
 │
 ├── car_management/
 │   ├── car_manag_menu.c
@@ -77,7 +82,13 @@ Car-Management-System-in-C/
 ├── booking.dat
 └── README.md
 ```
+## 📸 Project Preview
 
+![Car Management System Preview](image/img%205.png);
+![Booking Preview](image/img%204.png);
+![](image/img%201.png)
+![](image/img%202.png)
+![](image/img%203.png)
 ---
 
 ## ⚙️ How to Compile and Run
@@ -141,6 +152,8 @@ By completing this project, you will understand:
 * Report generation
 
 ---
+
+
 
 ## 👨‍💻 Author
 
