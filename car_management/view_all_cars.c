@@ -4,14 +4,14 @@
 void view_all_cars(Car * cars){
     FILE *file = fopen("cars.dat", "rb");
     if(file == NULL){
-        printf("\nError opening file!\n");
+        printf("\n%sError opening file!\n%s", RED, COLOR_END);
         return;
     }
 
     int found = 0;
     int id;
     int num;
-    printf("Press 1 for all list cars, 2 for a specific car: ");
+    printf("%sPress 1 for all list cars, 2 for a specific car: %s", CYAN, COLOR_END);
     scanf("%d", &num);
 
     if(num == 2){
@@ -19,9 +19,9 @@ void view_all_cars(Car * cars){
         scanf("%d", &id);
     }
     
-        printf("\n%-5s %-15s %-19s %-14s %-10s",
-               "ID", "Name", "Model", "Price/Day", "Available");
-        printf("\n------------------------------------------------------------------");
+        printf("\n%-5s %-15s %-19s %-14s %-10s", CYAN,
+               "ID", "Name", "Model", "Price/Day", "Available", COLOR_END);
+        printf("\n%s------------------------------------------------------------------%s", CYAN, COLOR_END);
 
         while (fread(cars, sizeof(Car), 1, file)){
             if (num == 1){
@@ -45,7 +45,7 @@ void view_all_cars(Car * cars){
             }
         }
     }
-    found == 0 ? printf("\nNo cars found.\n") : printf("\nEnd of car List.\n");
+    found == 0 ? printf("\n%sNo cars found.\n%s", YELLOW, COLOR_END) : printf("\n%sEnd of car List.%s\n", CYAN, COLOR_END);
     
     fclose(file);
 }

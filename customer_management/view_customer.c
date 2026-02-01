@@ -3,14 +3,14 @@
 void view_customer(Customer *customers){
      FILE *file = fopen("customer.dat", "rb");
     if(file == NULL){
-        printf("\nError opening file!\n");
+        printf("\n%sError opening file!%s\n", RED, COLOR_END);
         return;
     }
 
     int found = 0;
     int id;
     int num;
-    printf("Press 1 for all list customer, 2 for a specific customer: ");
+    printf("\n%sPress 1 for all list customer, 2 for a specific customer: %s", CYAN, COLOR_END);
     scanf("%d", &num);
 
     if(num == 2){
@@ -18,9 +18,9 @@ void view_customer(Customer *customers){
         scanf("%d", &id);
     }
     
-        printf("\n%-5s %-15s %-17s",
-               "ID", "Name", "Phone");
-        printf("\n--------------------------------");
+        printf("%s\n%-5s %-15s %-17s%s", CYAN,
+               "ID", "Name", "Phone", COLOR_END);
+        printf("\n%s--------------------------------%s", CYAN, COLOR_END);
 
         while (fread(customers, sizeof(Customer), 1, file)){
             if (num == 1){
@@ -40,7 +40,7 @@ void view_customer(Customer *customers){
             }
         }
     }
-    found == 0 ? printf("\nNo customer found.\n") : printf("\nEnd of Customer List.\n");
+    found == 0 ? printf("\n%sNo customer found.%s\n", YELLOW, COLOR_END) : printf("\n%sEnd of Customer List.%s\n", CYAN, COLOR_END);
     
     fclose(file);
 }

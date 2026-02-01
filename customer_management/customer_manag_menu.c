@@ -9,7 +9,7 @@ void customer_manag_menu(){
     printf("[1]. Add Customer\n");
     printf("[2]. View Customers\n");
     printf("[3]. Search Customers\n");
-    printf("[4]. Back to Main Menu\n");
+    printf("[%s4%s]. Back to Main Menu\n", CYAN, COLOR_END);
 
     printf("\nEnter your choice: ");
     scanf("%d", &option);
@@ -27,7 +27,7 @@ void customer_manag_menu(){
 
         default:
             if(option < 1 || option > 4){
-                printf("\nInvalid option . Please try again.\n");
+                printf("\n%sInvalid option . Please try again.\n%s", YELLOW, COLOR_END);
             }
 
         }

@@ -10,7 +10,7 @@ void booking_menu(){
     printf("[1].Book Car\n");
     printf("[2].Return Car\n");
     printf("[3].View Booking\n");
-    printf("[4].Back\n");
+    printf("[%s4%s].Back\n", CYAN, COLOR_END);
 
     printf("Enter your choice: ");
     scanf("%d", &choice);
@@ -28,7 +28,7 @@ void booking_menu(){
 
         default:
             if(choice < 1 || choice > 4){
-                printf("\nInvalid choice . Please try again.\n");
+                printf("%s\nInvalid choice . Please try again.\n%s", YELLOW, COLOR_END);
             }
 
         }

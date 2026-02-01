@@ -5,5 +5,5 @@ void main_menu() {
         printf("1. Car Management\n");
         printf("2. Customer Management\n");
         printf("3. Booking Management\n");
-        printf("4. Exit\n");
+        printf("%s4%s. Exit\n", CYAN, COLOR_END);
 }

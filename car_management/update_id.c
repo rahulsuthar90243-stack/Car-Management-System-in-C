@@ -5,7 +5,7 @@
 void update_id(Car *car){
     FILE *file = fopen("cars.dat", "r+b");
     if(file == NULL){
-        printf("\nError opening file!\n");
+        printf("\n%sError opening file!%s\n", RED, COLOR_END);
     }
 
     int id;
@@ -27,9 +27,9 @@ void update_id(Car *car){
         }
     }
    if(found == 0 ){
-    printf("\nNo cars found!\n");
+    printf("\n%sNo cars found!\n%s", YELLOW, COLOR_END);
    }else{
-    printf("\nCar ID update successfully.\n");
+    printf("\n%sCar ID update successfully.%s\n", GREEN, COLOR_END);
     update_view(car);
    }
     fclose(file);

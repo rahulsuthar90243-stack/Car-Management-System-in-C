@@ -7,5 +7,5 @@ void update_menu(){
     printf("\n[3]. Car Price");
     printf("\n[4]. Car Model");
     printf("\n[5]. Car Availability");
-    printf("\n[0]. Back to menu");
+    printf("\n[%s0%s]. Back to menu", CYAN, COLOR_END);
 }

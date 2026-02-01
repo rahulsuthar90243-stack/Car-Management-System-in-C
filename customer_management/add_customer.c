@@ -3,7 +3,7 @@
 void add_customer(Customer *customers){
     FILE *file = fopen("customer.dat", "ab");
     if(file == NULL){
-        printf("Error opening file!\n");
+        printf("\n%sError opening file!%s\n", RED, COLOR_END);
         return;
     }
 
@@ -24,5 +24,5 @@ void add_customer(Customer *customers){
     fwrite(customers, sizeof(Customer), 1, file);
     fclose(file);
 
-    printf("\nCustomer added successfully!\n");
+    printf("\n%sCustomer added successfully!%s\n", GREEN, COLOR_END);
 }

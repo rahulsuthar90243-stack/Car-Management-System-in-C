@@ -1,4 +1,4 @@
-#include "car_manag.h"
+#include "../car_manag.h"
 
 Car cars;
 
@@ -11,7 +11,7 @@ void car_manag_menu() {
     printf("[3]. Search Car\n");
     printf("[4]. Update Car\n");
     printf("[5]. Delete Car\n");
-    printf("[6]. Back to Main Menu\n");
+    printf("[%s6%s]. Back to Main Menu\n", CYAN, COLOR_END);
 
     printf("Enter your choice: ");
     scanf("%d", &option);

@@ -30,7 +30,7 @@ typedef struct Booking{
 void main_menu();
 void car_manag_menu();
 void customer_manag_menu();
-void booking_manag_menu();
+void booking_menu();
 
 //car management function prototypes
 void add_new_car(Car *cars);
@@ -64,4 +64,14 @@ void book_car(Car *car, Booking *book);
 void return_car();
 void view_bookings(Booking *book);
 void update_vil(int id, int status);
+
+
+
+extern const char* COLOR_END;
+extern const char* RED;
+extern const char* GREEN;
+extern const char* YELLOW;
+extern const char* CYAN;
+
+
 #endif

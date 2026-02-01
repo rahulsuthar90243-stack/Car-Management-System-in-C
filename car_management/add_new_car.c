@@ -4,7 +4,7 @@
 void add_new_car(Car *cars){
     FILE *file = fopen("cars.dat", "ab");
     if(file == NULL){
-        printf("Error opening file!\n");
+        printf("\n%sError opening file!\n%s", RED, COLOR_END);
         return;
     }
 
@@ -29,5 +29,5 @@ void add_new_car(Car *cars){
     fwrite(cars, sizeof(Car), 1, file);
     fclose(file);
 
-    printf("\nCar added successfully!\n");
+    printf("\n%sCar added successfully!\n%s", GREEN, COLOR_END);
 }

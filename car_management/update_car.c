@@ -4,7 +4,7 @@
 void update_car(Car *car){
 FILE *file = fopen("cars.dat", "rb");
 if(file == NULL){
-    printf("\nError opening file!");
+    printf("\n%sError opening file!%s", RED, COLOR_END);
     return;
 }
 
@@ -15,9 +15,9 @@ printf("\n==Update Car Management==");
 printf("\nPlease, enter car id: ");
 scanf("%d", &id);
 
-printf("\n%-5s %-15s %-19s %-14s %-10s",
-       "ID", "Name", "Model", "Price/Day", "Available");
-printf("\n------------------------------------------------------------------");
+printf("\n%-5s %-15s %-19s %-14s %-10s", CYAN,
+       "ID", "Name", "Model", "Price/Day", "Available", COLOR_END);
+printf("\n%s------------------------------------------------------------------%s", CYAN, COLOR_END);
 
 while (fread(car, sizeof(Car), 1, file)){
     if(car->car_id == id){
@@ -32,7 +32,7 @@ while (fread(car, sizeof(Car), 1, file)){
 }
 fclose(file);
 
-found = 0 ? printf("\nNo car found.") : printf("\nEnd car list.\n");
+found = 0 ? printf("\n%sNo car found.%s", YELLOW, COLOR_END) : printf("\n%sEnd car list.%s\n", CYAN, COLOR_END);
 
 while (1){
     update_menu();
@@ -55,7 +55,7 @@ while (1){
         return;    
     default:
         if(press > 5 || press < 1){
-            printf("\nInvalid option , Please try again.\n");
+            printf("\n%sInvalid option , Please try again.%s\n", YELLOW, COLOR_END);
         }
     }
     update_view(car);

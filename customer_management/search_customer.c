@@ -4,7 +4,7 @@ void search_customer(Customer *customers){
     FILE *file = fopen("customer.dat", "rb");
     if (file == NULL)
     {
-        printf("\nError opening file");
+        printf("\n%sError opening file%s", RED, COLOR_END);
         return;
     }
 
@@ -14,9 +14,9 @@ void search_customer(Customer *customers){
     printf("\nEnter Customer Id: ");
     scanf("%d", &id);
 
-    printf("\n%-5s %-15s %-17s",
-           "ID", "Name", "Phone");
-    printf("\n--------------------------------");
+    printf("\n%-5s %-15s %-17s", CYAN,
+           "ID", "Name", "Phone", COLOR_END);
+    printf("\n%s--------------------------------%s", CYAN, COLOR_END);
 
     while (fread(customers, sizeof(Customer), 1, file)){
         if (customers->customer_id == id)
@@ -29,6 +29,6 @@ void search_customer(Customer *customers){
         }
     }
 
-    found == 0 ? printf("\nNo customer found.\n") : printf("\nEnd of customer List.\n");
+    found == 0 ? printf("\n%sNo customer found.%s\n", YELLOW, COLOR_END) : printf("\n%sEnd of customer List.%s\n", CYAN, COLOR_END);
     fclose(file);
 }

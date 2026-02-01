@@ -8,7 +8,7 @@ void update_vil(int car_id, int status)
 
     if (file == NULL || temp == NULL)
     {
-        printf("\nError updating car availability!");
+        printf("\n%sError updating car availability!%s", RED, COLOR_END);
         return;
     }
 

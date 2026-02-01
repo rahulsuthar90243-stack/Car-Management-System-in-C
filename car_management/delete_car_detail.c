@@ -6,7 +6,7 @@ void delete_car(Car *car){
  FILE *temp = fopen("temp.dat", "wb");
 
  if(file == NULL || temp == NULL){
-    printf("\nError opening file!");
+    printf("\n%sError opening file!%s", RED, COLOR_END);
     return;
  }
 
@@ -24,9 +24,9 @@ void delete_car(Car *car){
  fgets(name, sizeof(name), stdin);
  name[strcspn(name, "\n")] = '\0';
 
- printf("\n%-5s %-15s %-19s %-14s %-10s",
-        "ID", "Name", "Model", "Price/Day", "Available");
- printf("\n------------------------------------------------------------------");
+ printf("\n%-5s %-15s %-19s %-14s %-10s", CYAN,
+        "ID", "Name", "Model", "Price/Day", "Available", COLOR_END);
+ printf("\n%s------------------------------------------------------------------%s", CYAN, COLOR_END);
 
  while (fread(car, sizeof(Car), 1, file)){
             if (car->car_id == id && strcmp(car->car_name, name) == 0){
@@ -42,7 +42,7 @@ void delete_car(Car *car){
         }
 
     if(!found){
-        printf("\nCar not found!!!");
+        printf("\n%sCar not found!!!%s", YELLOW, COLOR_END);
         fclose(file);
         fclose(temp);
         return;
@@ -70,6 +70,6 @@ void delete_car(Car *car){
     remove("cars.dat");
     rename("temp.dat", "cars.dat");
 
-    printf("\nCar removed successfully.\n\n");
+    printf("\n%sCar removed successfully.%s\n\n", CYAN, COLOR_END);
 
 }

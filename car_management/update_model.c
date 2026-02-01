@@ -4,7 +4,7 @@ void update_model(Car *car){
     FILE *file = fopen("cars.dat", "r+b");
     if (file == NULL)
     {
-        printf("\nError opening file!\n");
+        printf("\n%sError opening file!%s\n", RED, COLOR_END);
         return;
     }
 
@@ -39,11 +39,11 @@ void update_model(Car *car){
     fclose(file);
     if (found == 0)
     {
-        printf("\nNo cars found!\n");
+        printf("\n%s%sNo cars found!\n%s", YELLOW, COLOR_END);
     }
     else
     {
-        printf("\nCar model update successfully.\n");
+        printf("\n%sCar model update successfully.%s\n", GREEN, COLOR_END);
         update_view(car);
     }
 }

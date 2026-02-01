@@ -4,7 +4,7 @@
 void search_car(Car *car){
 FILE *file = fopen("cars.dat", "rb");
 if(file == NULL){
-    printf("\nError opening file");
+    printf("\n%sError opening file!%s", RED, COLOR_END);
     return;
 }
 
@@ -14,9 +14,9 @@ printf("\n===Search Car Detail===");
 printf("\nEnter Car Id: ");
 scanf("%d", &id);
 
-printf("\n%-5s %-15s %-19s %-14s %-10s",
-       "ID", "Name", "Model", "Price/Day", "Available");
-printf("\n------------------------------------------------------------------");
+printf("\n%-5s %-15s %-19s %-14s %-10s", CYAN,
+       "ID", "Name", "Model", "Price/Day", "Available", COLOR_END);
+printf("\n%s------------------------------------------------------------------%s", CYAN, COLOR_END);
 
 while (fread(car, sizeof(Car), 1, file)){
     if (car->car_id == id){
@@ -30,7 +30,7 @@ while (fread(car, sizeof(Car), 1, file)){
         }
     }
  
-    found == 0 ? printf("\nNo cars found.\n") : printf("\nEnd of car List.\n");
+    found == 0 ? printf("\n%sNo cars found.\n%s", YELLOW, COLOR_END) : printf("\n%sEnd of car List.\n%s", CYAN, COLOR_END);
     fclose(file);
 
 }

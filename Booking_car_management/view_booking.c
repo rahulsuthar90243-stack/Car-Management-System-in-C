@@ -6,14 +6,14 @@ void view_bookings(Booking *book){
 
     FILE *file = fopen("booking.dat", "rb");
     if(file == NULL){
-        printf("\nError opening file!");
+        printf("\n%sError opening file!%s", RED, COLOR_END);
         return;
     }
 
     int id, num;
     int found = 0;
 
-    printf("\nPress 1 for all bookings list, 2 for a specific booking: ");
+    printf("\n%sPress 1 for all bookings list, 2 for a specific booking: %s", CYAN, COLOR_END);
     scanf("%d", &num);
 
     if(num == 2){
@@ -21,9 +21,9 @@ void view_bookings(Booking *book){
     scanf("%d", &id);
     }
 
-printf("\n| %-10s | %-8s | %-11s | %-5s | %-12s |\n",
-       "Booking ID", "Car ID", "Customer ID", "Days", "Amount");
-printf("---------------------------------------------------------------\n");
+printf("%s\n| %-10s | %-8s | %-11s | %-5s | %-12s |\n%s", CYAN,
+       "Booking ID", "Car ID", "Customer ID", "Days", "Amount", COLOR_END);
+printf("%s---------------------------------------------------------------\n%s", CYAN, COLOR_END);
 
     while(fread(book, sizeof(Booking), 1, file)){
         if(num == 2){
@@ -49,7 +49,7 @@ printf("---------------------------------------------------------------\n");
         }
     }
 
-    found == 0 ? printf("\nNo booking") : printf("\n\nEnd of list");
+    found == 0 ? printf("\n%sNo booking%s", YELLOW, COLOR_END) : printf("\n\n%sEnd of list%s", CYAN, COLOR_END);
     fclose(file);
 
 }

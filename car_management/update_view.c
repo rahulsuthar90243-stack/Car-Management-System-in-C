@@ -4,7 +4,7 @@ void update_view(Car *car){
     int num;
     while(num > 1 || num < 0)
     {
-        printf("\n\nPress 1 to view car | Press 0 to return: ");
+        printf("\n\n%sPress 1 to view car | Press 0 to return: %s", CYAN, COLOR_END);
         scanf("%d", &num);
         if (num == 1){
             view_all_cars(car);
@@ -13,7 +13,7 @@ void update_view(Car *car){
             return;
         }
         else{
-            printf("\nInvalid choice!");
+            printf("\n%sInvalid choice!%s", YELLOW, COLOR_END);
         }
     }
 }

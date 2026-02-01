@@ -11,7 +11,7 @@ void return_car()
 
     if (file == NULL || temp == NULL)
     {
-        printf("\nError opening booking file!");
+        printf("\n%sError opening booking file!%s", RED, COLOR_END);
         return;
     }
 
@@ -37,7 +37,7 @@ void return_car()
     if (!found)
     {
         remove("temp.dat");
-        printf("\nInvalid Booking ID!");
+        printf("\n%sInvalid Booking ID!%s", YELLOW, COLOR_END);
         return;
     }
 
@@ -46,5 +46,5 @@ void return_car()
 
     update_vil(returnedCarId, 1);   // 🟢 RETURN → available
 
-    printf("\nCar returned successfully!");
+    printf("\n%sCar returned successfully!%s", GREEN, COLOR_END);
 }

@@ -7,13 +7,13 @@ void book_car(Car *car, Booking *book)
 
     if (file == NULL)
     {
-        printf("\nError Opening File!");
+        printf("%s\nError Opening File!%s", RED, COLOR_END);
         return;
     }
 
-    printf("\n%-5s %-15s %-19s %-14s %-10s",
-           "ID", "Name", "Model", "Price/Day", "Available");
-    printf("\n--------------------------------------------------------------");
+    printf("\n%-5s %-15s %-19s %-14s %-10s", CYAN,
+          "ID", "Name", "Model", "Price/Day", "Available", CYAN, COLOR_END);
+    printf("%s\n--------------------------------------------------------------%s", CYAN, COLOR_END);
 
     while (fread(car, sizeof(Car), 1, file))
     {
@@ -57,7 +57,7 @@ void book_car(Car *car, Booking *book)
 
     if (!found)
     {
-        printf("\nCar not available or invalid Car ID!");
+        printf("%s\nCar not available or invalid Car ID!%s", YELLOW, COLOR_END);
         return;
     }
 
@@ -67,8 +67,11 @@ void book_car(Car *car, Booking *book)
 
     update_vil(book->car_id, 0);   
 
-    printf("\nCar booked successfully!");
-    printf("\nTotal Rent Amount: %.2f\n", book->total_amount);
+    printf("%s\nCar booked successfully!%s", GREEN, COLOR_END);
+    printf("\nTotal Rent Amount: %sRs %.2f%s\n",
+          GREEN,
+          book->total_amount,
+          COLOR_END);
 }
 
 
